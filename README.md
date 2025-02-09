@@ -7,5 +7,3 @@ ITS120L Project
 ### Requirements
 
 xampp, mysql
-
-written in php
