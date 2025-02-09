@@ -154,3 +154,68 @@ button:hover {
 button:active {
     background-color: #cc7a00;
 }
+
+/* Account Page Styles */
+.account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Full viewport height */
+    background-color: #f4f4f4;
+}
+
+.account-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.account-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.account-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.account-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.account-box button:hover {
+    background-color: #ff9900;
+}
+
+.account-box p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.account-box a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.account-box a:hover {
+    color: #ff9900;
+}
