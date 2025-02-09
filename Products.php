@@ -2,7 +2,7 @@
 include 'includes/header.php';
 include 'includes/db.php';
 
-$category = $_GET['category'] ?? 'all'; // Get the selected category from the URL
+$category = $_GET['category'] ?? 'all'; 
 
 if ($category === 'all') {
     $stmt = $conn->query("SELECT * FROM products");
@@ -31,9 +31,9 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <img src="images/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>">
                     <h3><?php echo $product['name']; ?></h3>
                     <p><?php echo $product['description']; ?></p>
-                    <p><strong>Price:</strong> $<?php echo $product['price']; ?></p>
+                    <p><strong>Price:</strong> ₱<?php echo $product['price']; ?></p>
                     <p><strong>Category:</strong> <?php echo $product['category']; ?></p>
-                    <button onclick="addToCart(<?php echo $product['id']; ?>)">Add to Cart</button>
+                    <button onclick='addToCart(<?php echo json_encode($product); ?>)'>Add to Cart</button>
                 </div>
             <?php endforeach; ?>
         </div>

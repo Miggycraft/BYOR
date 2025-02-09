@@ -107,7 +107,10 @@ nav ul li a:hover {
 
 .product-card img {
     max-width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 footer {
@@ -218,4 +221,82 @@ button:active {
 
 .account-box a:hover {
     color: #ff9900;
+}
+
+/* Cart Item Styles */
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantity-controls button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-controls button:hover {
+    background-color: #ff9900;
+}
+
+.quantity-controls input {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart-item button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #ff9900;
+}
+
+#cart-total {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: right;
+}
+
+#cart-total h3 {
+    margin: 0;
 }
