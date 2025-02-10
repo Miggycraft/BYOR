@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
         } else {
             echo "<p>User not found.</p>";
+            header("refresh:1;url=Account.php");
         }
         $stmt->close();
     } elseif (isset($_POST["register"])) {
