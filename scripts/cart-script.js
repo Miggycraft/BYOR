@@ -61,6 +61,10 @@ function removeFromCart(index) {
 
 // Function to handle checkout
 function checkout() {
+    if (cart.length === 0){
+        alert('Your cart is empty!');
+        return;
+    }
     alert('Proceeding to checkout!');
     // Add logic to handle checkout (e.g., redirect to a payment page)
 }

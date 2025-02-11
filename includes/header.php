@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>BYOR</h1>
+            <h1 style="cursor: default; user-select: none;">BYOR</h1>
             <nav>
                 <!-- Left-aligned navigation -->
                 <ul class="nav-left">

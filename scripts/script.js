@@ -37,8 +37,3 @@ function updateCartCount() {
 
 // Call this function when the page loads to display the current cart count
 document.addEventListener('DOMContentLoaded', updateCartCount);
-
-function checkout() {
-    alert("Proceeding to checkout!");
-    // Add logic to handle checkout
-}
