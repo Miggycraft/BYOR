@@ -35,5 +35,14 @@ function updateCartCount() {
     }
 }
 
+function retrieveAllItems(){
+    fetch('scripts/Get_Items.php')
+    .then(response => response.json())
+    .then(products => {
+        console.log(products); // Print in console
+    })
+    .catch(error => console.error('Error:', error));
+}
+
 // Call this function when the page loads to display the current cart count
 document.addEventListener('DOMContentLoaded', updateCartCount);
