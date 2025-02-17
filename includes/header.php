@@ -19,6 +19,7 @@
                 <ul class="nav-left">
                     <li style="margin-left:0px;"><a href="Home.php">Home</a></li>
                     <li><a href="Products.php">Products</a></li>
+                    <li><a href="Chatbot.php">Chatbot</a></li>
                     <li><a href="About.php">About</a></li>
                 </ul>
                 <!-- Right-aligned navigation -->
