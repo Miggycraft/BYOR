@@ -35,13 +35,22 @@ function updateCartCount() {
     }
 }
 
-function retrieveAllItems(){
+window.addEventListener('DOMContentLoaded', retrieveAllItems); // just to call this asap
+
+function retrieveAllItems() {
+    const cachedProducts = localStorage.getItem('products');
+    
+    if (cachedProducts) {
+        console.log('Using cached products:', JSON.parse(cachedProducts));
+        return; // Stop if cache exists
+    }
+
     fetch('scripts/Get_Items.php')
-    .then(response => response.json())
-    .then(products => {
-        console.log(products); // Print in console
-    })
-    .catch(error => console.error('Error:', error));
+        .then(response => response.json())
+        .then(products => {
+            localStorage.setItem('products', JSON.stringify(products)); // Save to cache
+        })
+        .catch(error => console.error('Error:', error));
 }
 
 // Call this function when the page loads to display the current cart count

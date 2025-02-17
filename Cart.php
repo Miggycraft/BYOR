@@ -10,7 +10,6 @@
             <!-- Total price will be displayed here -->
         </div>
         <button onclick="checkout()">Checkout</button>
-        <button onclick="retrieveAllItems()">Retrieve all DB Items (Testing)</button>
     </div>
 </main>
 
