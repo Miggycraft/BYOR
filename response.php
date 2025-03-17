@@ -14,7 +14,8 @@ $dotenv->load();
 
 $api_key = $_ENV['API_KEY'] ?? null;
 
-$client = new Client($api_key);
+$client = Gemini::client($api_key);
+
 $prompt = "You are a professional chatbot assisting the user with computer specs. Make sure the pricing listed is accurate and in Philippine Peso (₱).";
 $prompt .= "\nOnly suggest products that are in the available cache, do not suggest prebuilt specs, and ensure the pricing is validated for each product.";
 $prompt .= "\nHere are the available products from cache: " . $cachedItems;
@@ -23,6 +24,6 @@ $prompt .= "\nYour response must follow this format for each product: ";
 $prompt .= "\n- Product Name: Description (₱Price)";
 $prompt .= "\nAfter listing the products, include the total cost at the end like this: 'Total Cost: ₱TotalAmount'.";
 $prompt .= "\nUser query: " . $text;
-$response = $client->geminiPro()->generateContent(new TextPart($prompt));
+$response = $client->generativeModel(model: 'models/gemini-1.5-flash-001')->generateContent(new TextPart($prompt));
 
 echo $response->text();
